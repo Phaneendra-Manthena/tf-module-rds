@@ -60,3 +60,7 @@ resource "aws_rds_cluster_instance" "cluster_instances" {
   engine             = aws_rds_cluster.rds.engine
   engine_version     = aws_rds_cluster.rds.engine_version
 }
+
+output "rds" {
+  value = aws_rds_cluster.rds.endpoint
+}
